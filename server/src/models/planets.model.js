@@ -28,6 +28,7 @@ function loadPlanetsData() {
           savePlanet(data);
         }
       })
+     
       .on("error", (error) => {
         console.log(error);
         reject(error);

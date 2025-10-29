@@ -22,7 +22,7 @@ async function httpSubmitLaunch(launch) {
       },
       body: JSON.stringify(launch),
     });
-  } catch (error) {
+  } catch (_error) {
     return {
       ok: false,
     };
@@ -42,4 +42,4 @@ async function httpAbortLaunch(id) {
   }
 }
 
-export { httpGetPlanets, httpGetLaunches, httpSubmitLaunch, httpAbortLaunch };
+export { httpAbortLaunch, httpGetLaunches, httpGetPlanets, httpSubmitLaunch };

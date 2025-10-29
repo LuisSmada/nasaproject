@@ -9,8 +9,8 @@ const Clickable = props => {
   } = props;
 
   const clickWithSound = (e) => {
-    sounds.click && sounds.click.play();
-    onClick && onClick(e);
+    sounds.click?.play();
+    onClick?.(e);
   };
 
   return (

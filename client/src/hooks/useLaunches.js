@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-import { httpGetLaunches, httpSubmitLaunch, httpAbortLaunch } from "./requests";
+import { httpGetLaunches, httpSubmitLaunch } from "./requests";
 
 function useLaunches(onSuccessSound, onAbortSound, onFailureSound) {
   const [launches, saveLaunches] = useState([]);
@@ -47,7 +47,7 @@ function useLaunches(onSuccessSound, onAbortSound, onFailureSound) {
   );
 
   const abortLaunch = useCallback(
-    async (id) => {
+    async (_id) => {
       // const response = await httpAbortLaunch(id);
 
       // TODO: Set success based on response.

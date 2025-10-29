@@ -47,9 +47,9 @@ const AppLayout = props => {
     }, 600);
   };
 
-  const onSuccessSound = () => sounds.success && sounds.success.play();
-  const onAbortSound = () => sounds.abort && sounds.abort.play();
-  const onFailureSound = () => sounds.warning && sounds.warning.play();
+  const onSuccessSound = () => sounds.success?.play();
+  const onAbortSound = () => sounds.abort?.play();
+  const onFailureSound = () => sounds.warning?.play();
 
   const {
     launches,
